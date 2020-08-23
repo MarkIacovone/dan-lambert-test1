@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    word-spacing: 0.08em;
+    color: rgb(174, 201, 176);
+}
+
+/* INTRODUCTION WINDOW */
+
+#parallaxWindow {
+    position: fixed;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.visible-elements {
+    opacity: 1 !important;
+    transition-property: opacity;
+    transition-timing-function: ease;
+    transition-duration: 2s;
+}
+
+.invisible-elements {
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: ease;
+    transition-duration: 1.5s;
+    pointer-events: none;
+}
+
+#parallax-lens {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#lensAnim {
+    pointer-events: all;
+    object-fit: contain;
+    width: 42em;
+    height: 42em;
+}
+
+#para-bg {
+    opacity: 0;
+    background-image: url(/assets/parallaxbgplaceholderCUT.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40em;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+}
+
+#lensGlow {
+    opacity: 0;
+    display: flex !important;
+    justify-content: center;
+    background-image: url(/assets/LENS-GLOSS2.png);
+    background-size: 39em 39em;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25em;
+    height: 25em;
+    z-index: -1;
+    left: auto !important;
+    top: auto !important;
+    pointer-events: none !important;
+}
+
+#logo {
+    opacity: 0;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/DanPhotoLogo.png);
+    background-size: 20em 10em;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20em;
+    height: 20em;
+    left: auto !important;
+    top: auto !important;
+    z-index: -1;
+    pointer-events: all;
+    cursor: pointer;
+    transition-property: background-size;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+}
+
+#logo:hover {
+    transition-property: background-size;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    background-size: 21em 11em;
+}
+
+#logo.filtered {
+    transition-property: filter, background-size;
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    filter: invert(100%);
+    pointer-events: none;
+}
+
+/* HOMEPAGE */
+
+#homepage {
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100em;
+    overflow: hidden;
+    display: none;
+}
+
+#section1 {
+    display: grid;
+    grid-template-columns: repeat(6, 10em);
+    grid-template-rows: 5em 8em 8em 8em 8em 5em;
+    width: 100%;
+    align-items: center;
+}
+
+#categoryContainer {
+    display: inherit;
+    grid-column: 1 / 7;
+    grid-row: 1 / 7;
+    grid-template-columns: inherit;
+    grid-template-rows: inherit;
+}
+
+#category1 {
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+}
+#category2 {
+    grid-column: 5 / 7;
+    grid-row: 2 / 4;
+}
+#category3 {
+    grid-column: 3 / 5;
+    grid-row: 4 / 6;
+}
+#category4 {
+    grid-column: 5 / 7;
+    grid-row: 4 / 6;
+}
+
+#quickFind {
+    width: 20em;
+    height: 40em;
+}
+
+#categoryImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#category1, #category2,
+#category3, #category4 {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 1%;
+}
+
+#titleBox {
+}
+
+#categoryTitle {
+}
