@@ -61,7 +61,7 @@ h1 {
 
 #para-bg {
     opacity: 0;
-    background-image: url(/assets/parallaxbgplaceholderCUT.png);
+    background-image: url(./assets/parallaxbgplaceholderCUT.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 40em;
@@ -74,7 +74,7 @@ h1 {
     opacity: 0;
     display: flex !important;
     justify-content: center;
-    background-image: url(/assets/LENS-GLOSS2.png);
+    background-image: url(./assets/LENS-GLOSS2.png);
     background-size: 39em 39em;
     background-position: center;
     background-repeat: no-repeat;
@@ -91,7 +91,7 @@ h1 {
     display: flex !important;
     justify-content: center;
     align-items: center;
-    background-image: url(/assets/DanPhotoLogo.png);
+    background-image: url(./assets/DanPhotoLogo.png);
     background-size: 20em 10em;
     background-position: center;
     background-repeat: no-repeat;
